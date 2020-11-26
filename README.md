@@ -1,6 +1,6 @@
 #Hyunggi Chang's CV
 
-Last updated: 2020.06.07
+Last updated: 2020.11.26
 
 #Source
 sb2nov - MIT License
