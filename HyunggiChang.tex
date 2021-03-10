@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{amsmath}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -58,6 +59,15 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeEmployment}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      {#5}
+    \end{tabular*}\vspace{-5pt}
+}
+
 \newcommand{\resumeProject}[2]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -81,10 +91,10 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeLeadership}[2]{
+\newcommand{\resumeSkills}[1]{
   \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      #1 & #2
+      #1
     \end{tabular*}
 }
 
@@ -105,23 +115,83 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://changh95.github.io}{\Large Hyunggi Chang}} & Email : \href{mailto:hyunggi.chang95@gmail.com}{hyunggi.chang95@gmail.com}\\
-  \href{http://changh95.github.io}{http://changh95.github.io} & Mobile : (+82) 010-2885-4493\\
+  \textbf{\href{http://changh95.github.io}{\Large Hyunggi Chang}} & Github: changh95 $|$ SlideShare: HyunggiChang \\
+  \href{http://changh95.github.io}{http://changh95.github.io} & Email : \href{mailto:hyunggi.chang95@gmail.com}{hyunggi.chang95@gmail.com} \\
+  {} & Mobile : (+82) 010-2885-4493
 \end{tabular*}
+
+%-----------Summary-----------------
+\section{Summary}
+    \resumeSkills{My main interest lies at the intersection of 3D Computer Vision and SLAM. My favourite
+applications are \\ Augmented Reality (AR) and Autonomous Driving, which both require a deep understanding into spatial \\ computing. I am a self-motivated team player and I always seek to improve.}
 
 %-----------EXPERIENCE-----------------
 \section{Employment}
   \resumeSubHeadingListStart
-
+  
     \resumeSubheading
       {VIRNECT}{Seoul, South Korea}
-      {Research Engineer (Full-time)}{Apr. 2019 - Present}
+      {Computer Vision Research Engineer (Full-time)}{Apr. 2019 - Present}
+        \resumeItemListStart
+            \resumeItem{Developed camera pose estimation algorithms in the \href{http://track.virnect.com}{\color{blue} VIRNECT TRACK} SDK.}
+            \resumeItem{Implemented prototype AR applications in the \href{http://track.virnect.com}{\color{blue} VIRNECT TRACK} SDK. }
+            \resumeItem{Designed and built an automatic test \& benchmark system integrated in development process.}
+            \resumeItem{Developed a visual tracking module used for R\&D projects.}             \resumeItem{Responsible for internal computer vision theory seminars}
+        \resumeItemListEnd   
+        
     \resumeSubheading
-      {McKinsey \& Company}{New York, USA}
-      {Analyst (Part-time)}{Oct. 2017 - Dec. 2017}
-    \resumeSubheading
-      {CACTUS Communications}{London, UK}
-      {Translator (Part-time)}{Oct. 2016 - Jun. 2018}
+      {McKinsey \& Company}{London, UK}
+      {Market Research (Part-time)}{Oct. 2017 - Dec. 2017}
+      \resumeItemListStart
+          \resumeItem{Lead student researcher in AI \& Robotics market research.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+%-----------Projects-----------------
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProject
+      {VIRNECT TRACK SDK (Ongoing)}
+         {Cross-platform AR SDK comprised of camera pose estimation features using Image and QR codes.}
+         \resumeItemListStart
+             \resumeItem{Responsible for improving robustness in computer vision algorithm implementations. \\
+             \textbf{Key achievements}: \\ 
+             1. Improved feature matching inlier rate by 2x using a better outlier removal method. \\
+             2. Increased object detection rate by 20\% via pre-training on synthetically generated images. \\
+             3. Improved tracking stability by 30\% using multi-hypothesis line-based tracking.}
+             \resumeItem{Implemented the following prototype features: \\
+             1. Keyframe-based 3D object detection \& pose estimation \\
+             2. Model-based pose estimation \& tracking \\
+             3. Visual area localization}
+             \resumeItem{Built a test \& benchmark system in CI/CD, which measures performance and checks for critical bugs.}
+         \resumeItemListEnd
+     \resumeProject
+      {Visual-SLAM with Object Detection (Ongoing)}
+      {Visual-SLAM with optimisation for reprojection errors of reconstructed 3D bounding boxes and visual keypoints.}
+    \resumeProject
+      {Easily Reconfigurable Marker-Based Tool Tracking Module}
+    {Object pose estimation on a easily reconfigurable marker \& camera settings with a novel marker-tooltip calibration.}
+    \resumeItemListStart
+        \resumeItem{Project 1 : Real-time AR welding guidance system}
+        \resumeItem{Project 2 : Remote AR guidance using tools and hand gestures.}
+    \resumeItemListEnd
+    \resumeProject
+      {Hyperspectral Wide-field Endoscopic Image Registration and Structure-from-Motion}
+        {3D reconstruction from multi-fibre hyperspectral images - An attempt for biomedical SLAM for cancer mapping.}
+    \resumeProject
+      {Mobile Rover for Environment Mapping and Survivor Detection in Disaster Scenarios}
+      {Voice-controllable rover, using RGB-D SLAM, object detection, and collision-avoidance - 1st Prize winner in Hackathon.}
+  \resumeSubHeadingListEnd
+
+%-----------Skills-----------------
+
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSkills{\textbf{Programming} - C++, Python, MATLAB}
+    \resumeSkills{\textbf{Frameworks} - OpenCV, COLMAP, Eigen, GTSAM}
+    \resumeSkills{\textbf{Collaboration} - Git, Docker, JIRA}
   \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
@@ -130,9 +200,16 @@
     \resumeSubheading
       {Imperial College London}{London, UK}
       {M.Res. Medical Robotics and Image-Guided Intervention (Merit)}{Oct. 2017 -- Sept. 2018}
+      \resumeItemListStart
+          \resumeItem{Course representative, Journal club lead}
+      \resumeItemListEnd
     \resumeSubheading
       {University of Warwick}{Coventry, UK}
       {B.Eng. Manufacturing and Mechanical Engineering (Upper-Second Class Hons.)}{Oct. 2014 -- Jun. 2017}
+      \resumeItemListStart
+          \resumeItem{Course representative, University ambassador}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
@@ -156,108 +233,56 @@
       {B.Eng Student Researcher (Advisor: Mr.Graeme Knowles)}{}{Oct. 2016 - Jun. 2017}
   \resumeSubHeadingListEnd
 
-%-----------Patents-----------------
-
-\section{Patents}
-  \resumeSubHeadingListStart
-    \resumeProject{Calibration Mechanism and Method for Posture Estimation of Augmented Reality Guide Tool}
-        {[PENDING] T.J.Ha, \underline{H.G.Chang}, S.H.Kim - Ref Num: TP191060}
-    \resumeProject{Method and System for Posture Estimation about Object Tracking Taken by Camera}
-     {[PENDING] T.J.Ha, \underline{H.G.Chang}, S.H.Kim, N.Y.Park - Ref Num: TP191091}
-  \resumeSubHeadingListEnd
-  
-
-%-----------Projects-----------------
-
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeProject
-      {VIRNECT AR SDK}
-         {Cross-platform AR SDK comprised of image target / QR code / CAD-model tracker and visual-inertial odometry}
-    \resumeProject
-      {Real-Time Welding Guidance using Augmented Reality}
-        {Augmented reality welding guidance system using markers and CAD-model tracking under extreme illumination}
-    \resumeProject
-      {Hyperspectral Wide-field Endoscopic Image Registration and Structure-from-Motion}
-        {Image registration and structure-from-motion pipeline for multi-fibre hyperspectral images}
-    \resumeProject
-      {Marker-based Tool Tracker with a Novel Multi-Camera Calibration Method}
-    {Pose detection and tracking system with an auto-calibration for camera extrinsics and marker-tooltip registration}
-    \resumeProject
-      {Mobile Rover for Environment Mapping and Survivor Detection in Disaster Scenarios}
-      {Voice-controllable rover, using RGB-D SLAM, object detection, and collision-avoidance.}
-    \resumeProject
-      {Snapchat-like Face Filters}
-      {Machine learning based face landmark detection and image morphology, using OpenCV and Dlib}
-    \resumeProject
-      {A Real-Time Intraoperative Data Mapping Device for Probe-Based Measurements}
-      {Real-time cancer detection system with a novel hyperspectral sensing device with augmented reality}
-    \resumeProject
-      {Vision-Based Endoscopic Navigation Using Simultaneous Localization and Mapping}
-      {Monocular visual SLAM (ORB-SLAM) on a rigid colon phantom.}
-    \resumeProject
-      {Motion Capture for Optimisation of Endoscopic Robot for Bi-Manual Suturing}
-      {Optimisation of robot structure for efficient hand motion transfer from a surgeon to a surgical robot}
-    \resumeProject
-      {Robotic Path Planning for Beating Heart Surgery}
-      {MATLAB simulation for inverse kinematics of a PUMA robot on dynamic trajectory}
-    \resumeProject
-      {Development of Modular Training Imaging Phantom for MRI Radiologists}
-      {Design of an MRI phantom for deliberate generation of image artefacts for educational purpose}
-  \resumeSubHeadingListEnd
-
-
-%-----------Leadership-----------------
-
-\section{Leadership}
-  \resumeSubHeadingListStart
-    \resumeLeadership{\textbf{Community Leader} - Kakao Community ``We will be SLAM Masters"}{Nov. 2019 - PRESENT}
-    \resumeLeadership{\textbf{Lead Student Ambassador} - Hamlyn Robotic \& AI Summer School}{2018}
-    \resumeLeadership{\textbf{Journal Club Lead} - Imperial College London}{2018}
-    \resumeLeadership{\textbf{Lead Student Researcher} - McKinsey \& Company}{2017}
-    \resumeLeadership{\textbf{Course Representative} - Imperial College London}{2017}
-    \resumeLeadership{\textbf{Course Representative} - University of Warwick}{2016}
-  \resumeSubHeadingListEnd
-
-%-----------Teaching-----------------
-\section{Teaching}
-    \resumeSubHeadingListStart
-        \resumeSubheading{Implementation of Simultaneous Localization and Mapping}{Seoul, South Korea}
-            {MODU Labs - Flipped Learning Scheme}{Oct. 2020 -- PRESENT}
-            \resumeItemListStart
-                \resumeItem{In-depth review of ORB-SLAM source code.}
-            \resumeItemListEnd   
-        \resumeSubheading{Fundamentals of Simultaneous Localisation and Mapping}{Seoul, South Korea}
-        {'We will be SLAM masters' study group}{Nov. 2019 -- Feb. 2020}
-            \resumeItemListStart
-                \resumeItem{In-depth review of ORB-SLAM source code.}
-            \resumeItemListEnd    
-        \resumeSubheading{Medical Imaging and Image-Guided Intervention}{Seoul, South Korea}
-        {MODU Labs - Flipped Learning Scheme}{Oct. 2019 -- Dec. 2019}
-            \resumeItemListStart
-                \resumeItem{X-ray, CT, Ultrasound, Nuclear Medicine, MRI, Microscopy, Fluorescence Imaging, Image-Guided Intervention.}
-            \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
 %-----------Talks-----------------
 \section{Conference Talks}
     \resumeSubHeadingListStart
-        \resumeTalk{ANAIN Community Charity Webinar}{2020}
-            \resumeItemListStart
-                \resumeItem{Computer vision without deep learning - Augmented reality and SLAM}
-            \resumeItemListEnd
+    
         \resumeTalk{MODUCON 2019}{2019}
             \resumeItemListStart
-                \resumeItem{Design considerations for robust computer vision systems and deep learning}
+                \resumeItem{Evaluating customer-focused metrics for developing robust computer vision systems using deep learning}
             \resumeItemListEnd
+
         \resumeTalk{PyCon APAC 2019}{2019}
             \resumeItemListStart
-                \resumeItem{Lightning Talk - Robot development with Python}
+                \resumeItem{Robot development with Python (Lightning talk)}
             \resumeItemListEnd
+
         \resumeTalk{NVIDIA Jetson Meetup}{2019}
             \resumeItemListStart
                 \resumeItem{NVIDIA Jetson Nano for intelligent robot development}
             \resumeItemListEnd
     \resumeSubHeadingListEnd
+
+%-----------Community-----------------
+\section{Community}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Community Leader}{2019 -- Present}
+        {Kakao community - ``We will become SLAM Masters"}{}
+    
+        \resumeSubheading{Tech Blogs}{2019 -- Present}
+            {Computer vision and SLAM blogs}{}
+            \resumeItemListStart
+                \resumeItem{\href{https://changh95.github.io}{\color{blue} New cv-learn blog}}
+                \resumeItem{\href{http://cv-learn.com}{\color{blue} Old cv-learn blog} - Notion Awards 2020 Nominee, 100+ daily views.}
+           \resumeItemListEnd   
+           
+        \resumeSubheading{Industry Seminar}{2019 -- 2020}
+        {Samsung, HANCOM Academy, HANCOM InSpace, Neubility, J.MARPLE}{}
+    
+        \resumeSubheading{Charity Webinar}{2019 -- 2020}
+        {Youtube webinar - tutorial on object pose estimation, tutorial on visual-SLAM}{}
+    
+        \resumeSubheading{Study Group Lead}{2019 -- 2020}
+            {MODU Labs - Group Study}{}
+            \resumeItemListStart
+                \resumeItem{Visual-SLAM implementation}
+                \resumeItem{Medical imaging and image-guided intervention}
+            \resumeItemListEnd   
+            
+        \resumeSubheading{Community Translation}{2018 -- 2019}
+        {Book translation: ``Introduction to Visual-SLAM"}{}
+        
+    \resumeSubHeadingListEnd
+
 %-------------------------------------------
 \end{document}
