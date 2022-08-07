@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Sourabh Bajaj
+% Author : Hyunggi Chang, Sourabh Bajaj
 % License : MIT
 %------------------------
 
@@ -115,35 +115,44 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://changh95.github.io}{\Large Hyunggi Chang}} & Github: changh95 $|$ SlideShare: HyunggiChang \\
-  \href{http://changh95.github.io}{http://changh95.github.io} & Email : \href{mailto:hyunggi.chang95@gmail.com}{hyunggi.chang95@gmail.com} \\
+  \textbf{\href{http://changh95.github.io}{\Large Hyunggi Chang}} & Github: \href{https://github.com/changh95}{changh95} $|$ SlideShare: \href{https://www.slideshare.net/HyunggiChang/}{HyunggiChang} \\
+  \href{https://www.cv-learn.com}{https://www.cv-learn.com} & Email : \href{mailto:hyunggi.chang95@gmail.com}{hyunggi.chang95@gmail.com} \\
   {} & Mobile : (+82) 010-2885-4493
 \end{tabular*}
 
 %-----------Summary-----------------
 \section{Summary}
-    \resumeSkills{My main interest lies at the intersection of 3D Computer Vision and SLAM. My favourite
-applications are \\ Augmented Reality (AR) and Autonomous Driving, which both require a deep understanding into spatial \\ computing. I am a self-motivated team player and I always seek to improve.}
+    \resumeSkills{I am interested in 3D computer vision and SLAM algorithms for mobile devices (VR/AR/Robotics). I have \\
+    experiences on developing robust and safe perception algorithms for spatial AI system. To build an efficient and \\ 
+    safe spatial AI system, I follow state-of-the-art algorithms and practise test-driven development.}
 
 %-----------EXPERIENCE-----------------
 \section{Employment}
   \resumeSubHeadingListStart
   
-    \resumeSubheading
-      {VIRNECT}{Seoul, South Korea}
-      {Computer Vision Research Engineer (Full-time)}{Apr. 2019 - Present}
+      \resumeSubheading
+      {StradVision}{Seoul, South Korea}
+      {Algorithm Engineer - Semantic SLAM (Full-time)}{Jun. 2021 - Present}
         \resumeItemListStart
-            \resumeItem{Developed camera pose estimation algorithms in the \href{http://track.virnect.com}{\color{blue} VIRNECT TRACK} SDK.}
-            \resumeItem{Implemented prototype AR applications in the \href{http://track.virnect.com}{\color{blue} VIRNECT TRACK} SDK. }
-            \resumeItem{Designed and built an automatic test \& benchmark system integrated in development process.}
-            \resumeItem{Developed a visual tracking module used for R\&D projects.}             \resumeItem{Responsible for internal computer vision theory seminars}
+            \resumeItem{Implement visual SLAM algorithms, using deep semantic features and road environment information.}
+            \resumeItem{Verify performance and safety via auto-benchmark using continuous integration and development (CI/CD).}
+            \resumeItem{Design modular software architecture, which complies with ASPICE and ISO 26262. }
+        \resumeItemListEnd   
+  
+    \resumeSubheading
+      {Virnect}{Seoul, South Korea}
+      {Computer Vision Research Engineer / Manager (Full-time)}{Apr. 2019 - May 2021}
+        \resumeItemListStart
+            \resumeItem{Developed pose estimation and visual localization algorithms for mobile apps in the Perception \& ML team.}
+            \resumeItem{Developed visual tracking software for a number of research projects in the Research Centre. }
+            \resumeItem{Designed and built an automatic test \& benchmark system for continuous integration and development (CI/CD).}
         \resumeItemListEnd   
         
     \resumeSubheading
       {McKinsey \& Company}{London, UK}
       {Market Research (Part-time)}{Oct. 2017 - Dec. 2017}
       \resumeItemListStart
-          \resumeItem{Lead student researcher in AI \& Robotics market research.}
+          \resumeItem{Performed market research in the AI \& Robotics market as the lead student researcher.}
       \resumeItemListEnd
       
   \resumeSubHeadingListEnd
@@ -152,34 +161,25 @@ applications are \\ Augmented Reality (AR) and Autonomous Driving, which both re
 
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeProject
-      {VIRNECT TRACK SDK (Ongoing)}
-         {Cross-platform AR SDK comprised of camera pose estimation features using Image and QR codes.}
-         \resumeItemListStart
-             \resumeItem{Responsible for improving robustness in computer vision algorithm implementations. \\
-             \textbf{Key achievements}: \\ 
-             1. Improved feature matching inlier rate by 2x using a better outlier removal method. \\
-             2. Increased object detection rate by 20\% via pre-training on synthetically generated images. \\
-             3. Improved tracking stability by 30\% using multi-hypothesis line-based tracking.}
-             \resumeItem{Implemented the following prototype features: \\
-             1. Keyframe-based 3D object detection \& pose estimation \\
-             2. Model-based pose estimation \& tracking \\
-             3. Visual area localization}
-             \resumeItem{Built a test \& benchmark system in CI/CD, which measures performance and checks for critical bugs.}
+   \resumeProject
+      {Vision-based auto valet parking system (Ongoing)}
+      {Semantic mapping of parking lot and vehicle localization.}
+           \resumeItemListStart
+             \resumeItem{Simultaneous localization and mapping (SLAM) using multiple fisheye cameras.} 
+             \resumeItem{Sensor fusion of semantic visual features (e.g. road markers) and wheel odometry.}
          \resumeItemListEnd
-     \resumeProject
-      {Visual-SLAM with Object Detection (Ongoing)}
-      {Visual-SLAM with optimisation for reprojection errors of reconstructed 3D bounding boxes and visual keypoints.}
+    \resumeProject
+      {Mobile Augmented Reality SDK - Track SDK [\href{http://track.virnect.com}{\color{blue} LINK}]}
+         {Cross-platform SDK for developing Augmented Reality (AR) applications.}
+         \resumeItemListStart
+             \resumeItem{Developed pose estimation and visual tracking algorithms, such as Image/QR/Model-based tracking and SLAM.} 
+         \resumeItemListEnd
     \resumeProject
       {Easily Reconfigurable Marker-Based Tool Tracking Module}
-    {Object pose estimation on a easily reconfigurable marker \& camera settings with a novel marker-tooltip calibration.}
-    \resumeItemListStart
-        \resumeItem{Project 1 : Real-time AR welding guidance system}
-        \resumeItem{Project 2 : Remote AR guidance using tools and hand gestures.}
-    \resumeItemListEnd
+    {Software module that enables easy object pose estimation on pen-shaped objects by using AR markers.}
     \resumeProject
       {Hyperspectral Wide-field Endoscopic Image Registration and Structure-from-Motion}
-        {3D reconstruction from multi-fibre hyperspectral images - An attempt for biomedical SLAM for cancer mapping.}
+        {3D reconstruction of cancer that are invisible by eye, using multi-fibre hyperspectral endoscope.}
     \resumeProject
       {Mobile Rover for Environment Mapping and Survivor Detection in Disaster Scenarios}
       {Voice-controllable rover, using RGB-D SLAM, object detection, and collision-avoidance - 1st Prize winner in Hackathon.}
@@ -189,9 +189,9 @@ applications are \\ Augmented Reality (AR) and Autonomous Driving, which both re
 
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeSkills{\textbf{Programming} - C++, Python, MATLAB}
-    \resumeSkills{\textbf{Frameworks} - OpenCV, COLMAP, Eigen, GTSAM}
-    \resumeSkills{\textbf{Collaboration} - Git, Docker, JIRA}
+    \resumeSkills{\textbf{Programming} - C17, C++17 (SSE/Neon), Python, Swift, Rust, MATLAB}
+    \resumeSkills{\textbf{Vision/SLAM} - OpenCV, Eigen, TensorFlow, PyTorch, Ceres-solver}
+    \resumeSkills{\textbf{Collaboration} - Git/GitHub, Docker, Linux, JIRA, TDD, Agile}
   \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
@@ -218,19 +218,19 @@ applications are \\ Augmented Reality (AR) and Autonomous Driving, which both re
 
     \resumeResearch
       {Cavendish Laboratory, University of Cambridge}{Cambridgeshire, UK}
-      {Visiting Researcher (Advisor: Dr.Sarah Bohndiek)}{}{Jan. 2019 - Mar. 2019}
+      {Visiting Researcher (Advisor: Dr. Sarah Bohndiek)}{}{Jan. 2019 - Mar. 2019}
     \resumeResearch
       {Surgical Imaging and Biophotonics Laboratory, Imperial College London}{London, UK}
-      {M.Res Student Researcher (Advisor: Prof.Daniel Elson)}{}{Jan. 2018 - Sept. 2018}
+      {M.Res Student Researcher (Advisor: Prof. Daniel Elson)}{}{Jan. 2018 - Sept. 2018}
       \resumeResearch
       {HARMS Lab, Imperial College London}{London, UK}
-      {M.Res Student Researcher (Advisor: Dr.George Mynolas)}{}{Oct. 2017 - Dec. 2017}
+      {M.Res Student Researcher (Advisor: Dr. George Mynolas)}{}{Oct. 2017 - Dec. 2017}
     \resumeResearch
       {Trace Metals in Medicine Laboratory, University of Warwick}{Coventry, UK}
-      {B.Eng Student Researcher (Advisor: Dr.Joanna Collingwood)}{}{Oct. 2016 - Jun. 2017}
+      {B.Eng Student Researcher (Advisor: Dr. Joanna Collingwood)}{}{Oct. 2016 - Jun. 2017}
      \resumeResearch
       {International Institute for Product and Service Innovation, WMG}{Coventry, UK}
-      {B.Eng Student Researcher (Advisor: Mr.Graeme Knowles)}{}{Oct. 2016 - Jun. 2017}
+      {B.Eng Student Researcher (Advisor: Mr. Graeme Knowles)}{}{Oct. 2016 - Jun. 2017}
   \resumeSubHeadingListEnd
 
 %-----------Talks-----------------
@@ -239,12 +239,12 @@ applications are \\ Augmented Reality (AR) and Autonomous Driving, which both re
     
         \resumeTalk{MODUCON 2019}{2019}
             \resumeItemListStart
-                \resumeItem{Evaluating customer-focused metrics for developing robust computer vision systems using deep learning}
+                \resumeItem{Evaluating customer-focused metrics for developing robust computer vision systems \href{https://youtu.be/ks96VTjAj6M}{\color{blue} [LINK]}}
             \resumeItemListEnd
 
         \resumeTalk{PyCon APAC 2019}{2019}
             \resumeItemListStart
-                \resumeItem{Robot development with Python (Lightning talk)}
+                \resumeItem{Robot development with Python (Lightning talk) \href{https://youtu.be/Ym9vxOx5k8U}{\color{blue} [LINK]}}
             \resumeItemListEnd
 
         \resumeTalk{NVIDIA Jetson Meetup}{2019}
@@ -256,31 +256,28 @@ applications are \\ Augmented Reality (AR) and Autonomous Driving, which both re
 %-----------Community-----------------
 \section{Community}
     \resumeSubHeadingListStart
-        \resumeSubheading{Community Leader}{2019 -- Present}
-        {Kakao community - ``We will become SLAM Masters"}{}
+        \resumeSubheading{Software Bootcamp Instructor}{2022 -- Present}
+        {Grepp - \href{https://programmers.co.kr/learn/courses/13295}{\color{blue} ``Programmers Autonomous Driving Dev course"}}{}
     
-        \resumeSubheading{Tech Blogs}{2019 -- Present}
-            {Computer vision and SLAM blogs}{}
-            \resumeItemListStart
-                \resumeItem{\href{https://changh95.github.io}{\color{blue} New cv-learn blog}}
-                \resumeItem{\href{http://cv-learn.com}{\color{blue} Old cv-learn blog} - Notion Awards 2020 Nominee, 100+ daily views.}
-           \resumeItemListEnd   
-           
-        \resumeSubheading{Industry Seminar}{2019 -- 2020}
-        {Samsung, HANCOM Academy, HANCOM InSpace, Neubility, J.MARPLE}{}
+        \resumeSubheading{Community Leader}{2019 -- Present}
+        {Kakao community - \href{https://open.kakao.com/o/g8T5kxLb}{\color{blue} ``We will be SLAM Masters"}}{}
+    
+        \resumeSubheading{Tech Blog}{2019 -- Present}
+            {Computer vision and SLAM blog - \href{https://www.cv-learn.com}{\color{blue} ``cv-learn blog"}}{}
+
+        \resumeSubheading{Industry Seminar}{2019 -- Present}
+        {Samsung, HANCOM Academy, HANCOM InSpace, J.MARPLE}{}
     
         \resumeSubheading{Charity Webinar}{2019 -- 2020}
-        {Youtube webinar - tutorial on object pose estimation, tutorial on visual-SLAM}{}
-    
+        {Youtube webinar - \href{https://youtu.be/QKtyoNAdoqc}{\color{blue} ``A tutorial on object pose estimation"}, \href{https://youtu.be/eoLJMNJnTUg}{\color{blue} ``A tutorial on visual-SLAM"}}{}
+
         \resumeSubheading{Study Group Lead}{2019 -- 2020}
-            {MODU Labs - Group Study}{}
-            \resumeItemListStart
-                \resumeItem{Visual-SLAM implementation}
-                \resumeItem{Medical imaging and image-guided intervention}
-            \resumeItemListEnd   
-            
-        \resumeSubheading{Community Translation}{2018 -- 2019}
-        {Book translation: ``Introduction to Visual-SLAM"}{}
+            {MODU Labs Group Study - \href{https://modulabs.co.kr/product/13th-wise-slam-study/}{\color{blue} ``Visual-SLAM"}, \href{https://tinyurl.com/65rbh23u}{\color{blue} ``Medical imaging"}}{}
+
+        \resumeSubheading{Book Translation}{2018 -- 2019}
+        {Community book translation: \href{https://changh95.github.io/20210123-slam-book-translation/}{\color{blue} ``Introduction to Visual-SLAM"}
+        }{}
+        
         
     \resumeSubHeadingListEnd
 
